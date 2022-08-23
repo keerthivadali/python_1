@@ -1,0 +1,20 @@
+#                 | r   r+   w   w+   a   a+
+# ------------------|--------------------------
+#read              | +   +        +        +
+#write             |     +    +   +    +   +
+#write after seek  |     +    +   +
+#create            |          +   +    +   +
+#truncate          |          +   +
+#position at start | +   +    +   +
+#position at end   |                   +   +
+
+ f = open("ass1.txt")    # open file in current directory
+ f = open("C:/Python38/README.txt")  # specifying full path
+ f = open("ass1.txt")      # equivalent to 'r' or 'rt'
+f = open("ass1.txt",'w')  # write in text mode
+f = open("ass1.bmp",'r+b') # read and write in binary mode
+f = open("test.txt", mode='r', encoding='utf-8')
+f = open("ass1.txt",'w+')  # write and read in text mode
+f = open("ass1.txt",'r+')  # read andwrite  in text mode
+f = open("ass1.txt",'a+')  # append,read&write in text mode
+#b is for binary mode
